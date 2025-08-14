@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Receitas Despesas e Lucro</title>
+  <style>
+    body {
+      background-color: #f9f2f2;
+      font-style: italic;
+    }
+    .mes {
+      width: 200px;
+      height: 200px;
+      border: 4px solid #060404;
+      background-color: #a49f9faf;
+      padding: 20px;
+      margin: 10px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Receitas Despesas e Lucro</h1>
+<div class="mes" id="janeiro">
+    <h2>Janeiro</h2>
+    <label>Receita:</label>
+    <input type="number" id="receita-janeiro" value="0">
+    <br>
+    <label>Despesa:</label>
+    <input type="number" id="despesa-janeiro" value="0">
+    <br>
+    <button onclick="calcular('janeiro')">Calcular</button>
+    <p id="lucro-janeiro"></p>
+  </div>
+
+    <div class="mes" id="fevereiro">
+        <h2>Fevereiro</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-fevereiro" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-fevereiro" value="0">
+        <br>
+        <button onclick="calcular('fevereiro')">Calcular</button>
+        <p id="lucro-fevereiro"></p>
+    </div>
+
+    <div class="mes" id="marco">
+        <h2>Março</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-marco" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-marco" value="0">
+        <br>
+        <button onclick="calcular('marco')">Calcular</button>
+        <p id="lucro-marco"></p>
+    </div>
+
+    <div class="mes" id="abril">
+        <h2>Abril</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-abril" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-abril" value="0">
+        <br>
+        <button onclick="calcular('abril')">Calcular</button>
+        <p id="lucro-abril"></p>
+    </div>
+
+    <div class="mes" id="maio">
+        <h2>Maio</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-maio" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-maio" value="0">
+        <br>
+        <button onclick="calcular('maio')">Calcular</button>
+        <p id="lucro-maio"></p>
+    </div>
+
+    <div class="mes" id="junho">
+        <h2>Junho</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-junho" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-junho" value="0">
+        <br>
+        <button onclick="calcular('junho')">Calcular</button>
+        <p id="lucro-junho"></p>
+    </div>
+
+    <div class="mes" id="julho">
+        <h2>Julho</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-julho" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-julho" value="0">
+        <br>
+        <button onclick="calcular('julho')">Calcular</button>
+        <p id="lucro-julho"></p>
+    </div>
+
+    <div class="mes" id="agosto">
+        <h2>Agosto</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-agosto" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-agosto" value="0">
+        <br>
+        <button onclick="calcular('agosto')">Calcular</button>
+        <p id="lucro-agosto"></p>
+    </div>
+
+    <div class="mes" id="setembro">
+        <h2>Setembro</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-setembro" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-setembro" value="0">
+        <br>
+        <button onclick="calcular('setembro')">Calcular</button>
+        <p id="lucro-setembro"></p>
+    </div>
+
+    <div class="mes" id="outubro">
+        <h2>Outubro</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-outubro" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-outubro" value="0">
+        <br>
+        <button onclick="calcular('outubro')">Calcular</button>
+        <p id="lucro-outubro"></p>
+    </div>
+
+    <div class="mes" id="novembro">
+        <h2>Novembro</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-novembro" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-novembro" value="0">
+        <br>
+        <button onclick="calcular('novembro')">Calcular</button>
+        <p id="lucro-novembro"></p>
+    </div>
+
+    <div class="mes" id="dezembro">
+        <h2>Dezembro</h2>
+        <label>Receita:</label>
+        <input type="number" id="receita-dezembro" value="0">
+        <br>
+        <label>Despesa:</label>
+        <input type="number" id="despesa-dezembro" value="0">
+        <br>
+        <button onclick="calcular('dezembro')">Calcular</button>
+        <p id="lucro-dezembro"></p>
+    </div>
+ <div id="balanco-final">
+  <h2>Balanço Final do Ano</h2>
+  <p id="receita-total"></p>
+  <p id="despesa-total"></p>
+  <p id="lucro-total"></p>
+  <p id="mensagem-balanco" style="font-weight: bold; color: rgb(22, 7, 7);"></p>
+</div>
+
+  <script>
+    let receitaTotal = 0;
+    let despesaTotal = 0;
+    let lucroTotal = 0;
+
+    function calcular(mes) {
+        const receita = parseFloat(document.getElementById(`receita-${mes}`).value) || 0;
+        const despesa = parseFloat(document.getElementById(`despesa-${mes}`).value) || 0;
+        const lucro = receita - despesa;
+        document.getElementById(`lucro-${mes}`).innerHTML = `R$ ${lucro.toFixed(2)}`;
+      receitaTotal += receita;
+      despesaTotal += despesa;
+      lucroTotal += lucro;
+      atualizarBalancoFinal();
+    }
+
+ function atualizarBalancoFinal() {
+  document.getElementById("receita-total").innerHTML = `Receita Total: R$ ${receitaTotal.toFixed(2)}`;
+  document.getElementById("despesa-total").innerHTML = `Despesa Total: R$ ${despesaTotal.toFixed(2)}`;
+  document.getElementById("lucro-total").innerHTML = `Lucro Total: R$ ${lucroTotal.toFixed(2)}`;
+
+  let mensagem = "";
+  if (despesaTotal > receitaTotal) {
+    mensagem = "Prejuízo: As despesas são maiores que as receitas.";
+  } else if (lucroTotal > 0) {
+    mensagem = "Lucro positivo: As receitas são maiores que as despesas.";
+  } else if (lucroTotal < 0) {
+    mensagem = "Prejuízo: As despesas são maiores que as receitas.";
+  } else {
+    mensagem = "Empate: As receitas são iguais às despesas.";
+  }
+  document.getElementById("mensagem-balanco").innerHTML = mensagem;
+}
+
+  </script>
+</body>
+</html>
